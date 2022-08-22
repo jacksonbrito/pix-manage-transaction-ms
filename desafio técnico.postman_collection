@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "96b3103c-16a1-4206-a8a6-4cb3252157e6",
+		"name": "Desafio técnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22915278"
+	},
+	"item": [
+		{
+			"name": "Cadastro de chave - CPF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaveCPF\": \"11935769030\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local-host}}/key",
+					"host": [
+						"{{local-host}}"
+					],
+					"path": [
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar chaves cadastradas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local-host}}/key",
+					"host": [
+						"{{local-host}}"
+					],
+					"path": [
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir chave por Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{local-host}}/key/1",
+					"host": [
+						"{{local-host}}"
+					],
+					"path": [
+						"key",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar chave cadastradas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chave\": \"+5511940801165\",\r\n    \"tipoChave\": \"PHONE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local-host}}/key/1",
+					"host": [
+						"{{local-host}}"
+					],
+					"path": [
+						"key",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro de chave - EMAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaveEmail\": \"jackson.brito03@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local-host}}/key",
+					"host": [
+						"{{local-host}}"
+					],
+					"path": [
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagamento de Pix",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chavePix\": \"47444292892\",\r\n    \"valorPix\": \"204.70\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local-host}}/pay",
+					"host": [
+						"{{local-host}}"
+					],
+					"path": [
+						"pay"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
