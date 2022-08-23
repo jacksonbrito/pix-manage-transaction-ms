@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 
 @RestController
@@ -20,5 +21,11 @@ public class RecebimentoController {
     @ResponseStatus(HttpStatus.OK)
     public RecebimentoPix receberPagamento(@RequestBody @Valid RecebimentoPix recebimentoPix){
         return recebimentoPixService.salvarRecebimentoPix(recebimentoPix);
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<RecebimentoPix> listarRecebiemntos() {
+        return recebimentoPixService.listarRecebimentosPix();
     }
 }
